@@ -28,76 +28,49 @@
   
     
     <entry>
-      <title><![CDATA[about]]></title>
-      <url>http://LenGithub.github.io/about/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[404 Not Found：该页无法显示]]></title>
       <url>http://LenGithub.github.io//404.html</url>
-      <content type="html"><![CDATA[<style type="text/css">
-    .article-header {
-        padding: 0;
-        padding-top: 26px;
-        border-left: none;
-        text-align: center;
-    }
-    .article-header:hover {
-        border-left: none;
-    }
-    .article-title {
-        font-size: 2.1em;
-    }
-    strong a {
-        color: #747474;
-    }
-    .article-meta {
-        display: none;
-    }
-    .share {
-        display: none;
-    }
-    .ds-meta {
-        display: none;
-    }
-    .player {
-        margin-left: -10px;
-    }
-    .sign {
-        text-align: right;
-        font-style: italic;
-    }
-      #page-visit {
-        display: none;
-    }
-    .center {
-        text-align: center;
-        height: 2.5em;
-        font-weight: bold;
-    }
-    .article-entry hr {
-        margin: 0;
-    }
-    .pic {
-        text-align: center;
-        margin: 0;
-    }
-    .pic br {
-          display: none;
-      }
-    #container .article-info-post.article-info {
+      <content type="html"><![CDATA[<p><style type="text/css"><br>    .article-header {<br>        padding: 0;<br>        padding-top: 26px;<br>        border-left: none;<br>        text-align: center;<br>    }<br>    .article-header:hover {<br>        border-left: none;<br>    }<br>    .article-title {<br>        font-size: 2.1em;<br>    }<br>    strong a {<br>        color: #747474;<br>    }<br>    .article-meta {<br>        display: none;<br>    }<br>    .share {<br>        display: none;<br>    }<br>    .ds-meta {<br>        display: none;<br>    }<br>    .player {<br>        margin-left: -10px;<br>    }<br>    .sign {<br>        text-align: right;<br>        font-style: italic;<br>    }</p>
+<pre><code>  #page-visit {
+    display: none;
+}
+.center {
+    text-align: center;
+    height: 2.5em;
+    font-weight: bold;
+}
+.article-entry hr {
+    margin: 0;
+}
+.pic {
+    text-align: center;
+    margin: 0;
+}
+.pic br {
       display: none;
-      }
-    #container .article .article-title {
-    padding: 0;
-    }
-</style>]]></content>
+  }
+#container .article-info-post.article-info {
+  display: none;
+  }
+#container .article .article-title {
+padding: 0;
+}
+</code></pre><p></style></p>
+<p>##很抱歉，您所访问的地址并不存在:<br><img src="https://lengithub.github.io/img/404.png" alt="image"></p>
+<p>##关于作者</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var UserInfo = &#123;</div><div class="line">  nickName  : <span class="string">"len"</span>,</div><div class="line">   weibo : <span class="string">"http://weibo.com/nitingdedao11"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
     </entry>
     
     <entry>
       <title><![CDATA[tags]]></title>
       <url>http://LenGithub.github.io/tags/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[about]]></title>
+      <url>http://LenGithub.github.io/about/index.html</url>
       <content type="html"></content>
     </entry>
     
