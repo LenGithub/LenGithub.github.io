@@ -207,7 +207,7 @@ Deploy to remote sit">
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/java-hello/">-java -hello</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/app/">app</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/文章/">文章</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/app/">app</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/文章/">文章</a></li></ul>
                     </div>
                 </section>
                 
@@ -357,18 +357,35 @@ Deploy to remote sit">
 
 
 
-    <nav id="article-nav">
-        
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/12/15/hello-world/">
-                    我的第一篇博客
-                </a>
-            </div>
-        
-    </nav>
-
   
+  
+  
+  
+	<! -- ���Ӿ���ͼ�� -->
+<div class ="post-donate">
+    <div id="donate_board" class="donate_bar center">
+        <a id="btn_donate" class="btn_donate" href="javascript:;" title="����"></a>
+        <span class="donate_txt">
+           ��<br>
+		   欣赏此文？求鼓励，求支持！
+        </span>
+        <br>
+      </div>  
+	<div id="donate_guide" class="donate_bar center hidden" >
+		<!-- ֧��������ͼ�� -->
+		<img src="/img/zhifubao.jpg" alt="֧��������"> 
+		<!-- ΢�Ŵ���ͼ�� -->
+		<img src="/img/weixin.jpg" alt="΢�Ŵ���">  
+    </div>
+	<script type="text/javascript">
+		document.getElementById('btn_donate').onclick = function(){
+			$('#donate_board').addClass('hidden');
+			$('#donate_guide').removeClass('hidden');
+		}
+	</script>
+</div>
+<! -- ���Ӿ���ͼ�� -->
+
 </article>
 
     <div id="toc" class="toc-article">
@@ -455,13 +472,11 @@ Deploy to remote sit">
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/12/15/hello-world/" title="下一篇: 我的第一篇博客">
-                <i class="fa fa-angle-right"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/12/15/hello-world - 副本/">我的第二篇博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/15/hello-world/">我的第一篇博客</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/12/15/hello-world - 副本/">我的第二篇博客</a></li></ul>
 
 
 
