@@ -28,12 +28,6 @@
   
     
     <entry>
-      <title><![CDATA[tags]]></title>
-      <url>http://LenGithub.github.io/tags/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[404 Not Found：该页无法显示]]></title>
       <url>http://LenGithub.github.io//404.html</url>
       <content type="html"><![CDATA[<p><style type="text/css"><br>    .article-header {<br>        padding: 0;<br>        padding-top: 26px;<br>        border-left: none;<br>        text-align: center;<br>    }<br>    .article-header:hover {<br>        border-left: none;<br>    }<br>    .article-title {<br>        font-size: 2.1em;<br>    }<br>    strong a {<br>        color: #747474;<br>    }<br>    .article-meta {<br>        display: none;<br>    }<br>    .share {<br>        display: none;<br>    }<br>    .ds-meta {<br>        display: none;<br>    }<br>    .player {<br>        margin-left: -10px;<br>    }<br>    .sign {<br>        text-align: right;<br>        font-style: italic;<br>    }</p>
@@ -71,6 +65,12 @@ padding: 0;
     <entry>
       <title><![CDATA[about]]></title>
       <url>http://LenGithub.github.io/about/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[tags]]></title>
+      <url>http://LenGithub.github.io/tags/index.html</url>
       <content type="html"></content>
     </entry>
     
