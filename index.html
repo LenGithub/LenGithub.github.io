@@ -197,7 +197,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/app/">app</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/文章/">文章</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/app/">app</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ios/">ios</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/安卓/">安卓</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/文章/">文章</a></li></ul>
                     </div>
                 </section>
                 
@@ -269,6 +269,87 @@
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-app接口设计" class="article article-type-post" itemscope itemprop="blogPost">
+
+
+  
+    <div class="article-meta">
+      <a href="/2016/12/16/app接口设计/" class="article-date">
+      <time datetime="2016-12-16T04:20:58.945Z" itemprop="datePublished">2016-12-16</time>
+</a>
+
+ 
+    <a href="/2016/12/16/app接口设计/#comments" title="查看评论">
+        <i class="fa fa-comments-o" aria-hidden="true"></i>
+        <span class="count-comment"></span>
+        
+            <span class="ds-thread-count"  data-thread-key="2016/12/16/app接口设计/" ></span>
+        
+        
+    </a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/16/app接口设计/">app推送</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><strong>版权声明：本文为博主原创文章，未经博主允许不得转载。</strong><br>app推送有腾讯信鸽,百度推送,极光推送…  其实用法都差不多,本人一般用极光推送。</p>
+<h3 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">注册地址为[Writing](https://www.jiguang.cn)</div></pre></td></tr></table></figure>
+<h3 id="获取极光appKey与masterSecret"><a href="#获取极光appKey与masterSecret" class="headerlink" title="获取极光appKey与masterSecret"></a>获取极光appKey与masterSecret</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">注册极光账号然后创建一个app,极光就会生成appKey与masterSecret,安卓填上包名即可集成了,ios客户端比较麻烦,需要上传证书,ios也分为生产模式和开发模式。</div></pre></td></tr></table></figure>
+<h3 id="全推和个推"><a href="#全推和个推" class="headerlink" title="全推和个推"></a>全推和个推</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">个推就是指定用户推,app集成极光的时候,通过别名注册,可以区分用户即可,我们是通过用户的id去设置别名。</div><div class="line">全推,即是所有用户推送。</div></pre></td></tr></table></figure>
+<p>##个推<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">             </div><div class="line">JPushClient jpushClient = <span class="keyword">new</span> JPushClient(masterSecret, appKey, <span class="number">3</span>);<span class="comment">//传入注册的masterSecret, appKey即可</span></div><div class="line">      PushPayload payload = PushPayload.newBuilder()</div><div class="line">              .setPlatform(Platform.all())</div><div class="line">            .setAudience(Audience.registrationId(name))</div><div class="line">              .setNotification(Notification.alert(text))</div><div class="line">              .build();;<span class="comment">//设置范围</span></div><div class="line">       System.out.println(payload.toString()+<span class="string">"-----"</span>);</div><div class="line">  <span class="keyword">try</span> &#123;</div><div class="line">      PushResult result = jpushClient.sendPush(payload);</div><div class="line">      LOG.info(<span class="string">"Got result - "</span> + result);</div><div class="line"></div><div class="line">  &#125; <span class="keyword">catch</span> (APIConnectionException e) &#123;</div><div class="line">      <span class="comment">// Connection error, should retry later</span></div><div class="line">      LOG.error(<span class="string">"Connection error, should retry later"</span>, e);</div><div class="line"></div><div class="line">  &#125; <span class="keyword">catch</span> (APIRequestException e) &#123;</div><div class="line">      <span class="comment">// Should review the error, and fix the request</span></div><div class="line">      LOG.error(<span class="string">"Should review the error, and fix the request"</span>, e);</div><div class="line">      LOG.info(<span class="string">"HTTP Status: "</span> + e.getStatus());</div><div class="line">      LOG.info(<span class="string">"Error Code: "</span> + e.getErrorCode());</div><div class="line">      LOG.info(<span class="string">"Error Message: "</span> + e.getErrorMessage());</div><div class="line">  &#125;</div></pre></td></tr></table></figure></p>
+<p>##全推<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">             </div><div class="line">JPushClient jpushClient = <span class="keyword">new</span> JPushClient(masterSecret, appKey, <span class="number">3</span>);<span class="comment">//传入注册的masterSecret, appKey即可</span></div><div class="line">      PushPayload payload = PushPayload.newBuilder()</div><div class="line">              .setPlatform(Platform.all())</div><div class="line">              .setNotification(Notification.alert(text))</div><div class="line">              .build();<span class="comment">//设置范围</span></div><div class="line">       System.out.println(payload.toString()+<span class="string">"-----"</span>);</div><div class="line">  <span class="keyword">try</span> &#123;</div><div class="line">      PushResult result = jpushClient.sendPush(payload);</div><div class="line">      LOG.info(<span class="string">"Got result - "</span> + result);</div><div class="line"></div><div class="line">  &#125; <span class="keyword">catch</span> (APIConnectionException e) &#123;</div><div class="line">      <span class="comment">// Connection error, should retry later</span></div><div class="line">      LOG.error(<span class="string">"Connection error, should retry later"</span>, e);</div><div class="line"></div><div class="line">  &#125; <span class="keyword">catch</span> (APIRequestException e) &#123;</div><div class="line">      <span class="comment">// Should review the error, and fix the request</span></div><div class="line">      LOG.error(<span class="string">"Should review the error, and fix the request"</span>, e);</div><div class="line">      LOG.info(<span class="string">"HTTP Status: "</span> + e.getStatus());</div><div class="line">      LOG.info(<span class="string">"Error Code: "</span> + e.getErrorCode());</div><div class="line">      LOG.info(<span class="string">"Error Message: "</span> + e.getErrorMessage());</div><div class="line">  &#125;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/java/">java</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/app/">app</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/安卓/">安卓</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-hello-world - 副本" class="article article-type-post" itemscope itemprop="blogPost">
 
