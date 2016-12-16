@@ -315,7 +315,7 @@
 <li>姓名: [王锥强][3]</li>
 <li><p>英文名: [Len][3]</p>
 </li>
-<li><p>Email: <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#x38;&#55;&#x32;&#x31;&#52;&#51;&#x38;&#x34;&#x38;&#x40;&#113;&#113;&#46;&#x63;&#111;&#x6d;">&#x38;&#55;&#x32;&#x31;&#52;&#51;&#x38;&#x34;&#x38;&#x40;&#113;&#113;&#46;&#x63;&#111;&#x6d;</a></p>
+<li><p>Email: <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#58;&#56;&#55;&#x32;&#49;&#x34;&#x33;&#56;&#x34;&#x38;&#64;&#113;&#x71;&#x2e;&#99;&#111;&#x6d;">&#56;&#55;&#x32;&#49;&#x34;&#x33;&#56;&#x34;&#x38;&#64;&#113;&#x71;&#x2e;&#99;&#111;&#x6d;</a></p>
 </li>
 </ul>
 <p>##项目经验</p>
@@ -410,9 +410,46 @@
         }
 
         
+            // Add comment count
+            $(function(){ 
+                var jsonUrl = "http://api.duoshuo.com/threads/counts.jsonp?short_name=lenwang&threads=about/index.html&callback=?";
+                $.getJSON(jsonUrl, function(result){
+                    $.each(result.response, function(i, field){
+                        var value = field.comments;
+                        if (value > 0) {
+                            $(".count-comment").text(value);
+                            return;
+                        }
+                    })
+                })
+            })
+        
     </script>
     
-    <script> loadComment(); </script>
+    <aside class="comment-bar">
+        <a href="javascript:void(0);">
+            <i class="fa fa-commenting-o animated infinite pulse"></i>
+            <i class="fa fa-spinner fa-pulse"></i>
+            <span class="count-comment"></span>
+        </a>
+    </aside>
+    <script>
+        var $commentBar = $("#comments aside.comment-bar");
+        var load$hide = function(){
+            $commentBar.find("a > i").toggle();
+            loadComment();
+            $commentBar.fadeOut(800);
+        }
+        $commentBar.click(function(){
+            load$hide();
+        })
+        $commentBar.children("a").hover(function(){
+            load$hide();
+        })
+        if (window.location.hash === "#comments") {
+            load$hide();
+        }
+    </script>
 
 </div>
     
