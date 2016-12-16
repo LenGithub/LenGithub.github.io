@@ -307,7 +307,7 @@
 <li>姓名: [王锥强][3]</li>
 <li><p>英文名: [Len][3]</p>
 </li>
-<li><p>Email: <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#111;&#x3a;&#x38;&#55;&#50;&#49;&#52;&#x33;&#x38;&#52;&#56;&#x40;&#113;&#x71;&#46;&#x63;&#x6f;&#x6d;">&#x38;&#55;&#50;&#49;&#52;&#x33;&#x38;&#52;&#56;&#x40;&#113;&#x71;&#46;&#x63;&#x6f;&#x6d;</a></p>
+<li><p>Email: <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#58;&#x38;&#55;&#x32;&#49;&#52;&#x33;&#x38;&#x34;&#x38;&#64;&#113;&#113;&#x2e;&#x63;&#x6f;&#109;">&#x38;&#55;&#x32;&#49;&#52;&#x33;&#x38;&#x34;&#x38;&#64;&#113;&#113;&#x2e;&#x63;&#x6f;&#109;</a></p>
 </li>
 </ul>
 <p>##项目经验</p>
@@ -334,7 +334,30 @@
 
   
     
-	
+	<! -- 添加捐赠图标 -->
+<div class ="post-donate">
+    <div id="donate_board" class="donate_bar center">
+        <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏"></a>
+        <span class="donate_txt">
+           ↑<br>
+		   欣赏此文？求鼓励，求支持！
+        </span>
+        <br>
+      </div>  
+	<div id="donate_guide" class="donate_bar center hidden" >
+		<!-- 支付宝打赏图案 -->
+		<img src="/img/zhifubao.jpg" alt="支付宝打赏"> 
+		<!-- 微信打赏图案 -->
+		<img src="/img/weixin.jpg" alt="微信打赏">  
+    </div>
+	<script type="text/javascript">
+		document.getElementById('btn_donate').onclick = function(){
+			$('#donate_board').addClass('hidden');
+			$('#donate_guide').removeClass('hidden');
+		}
+	</script>
+</div>
+<! -- 添加捐赠图标 -->
 
 </article>
 
