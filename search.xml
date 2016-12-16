@@ -57,12 +57,6 @@ padding: 0;
     </entry>
     
     <entry>
-      <title><![CDATA[tags]]></title>
-      <url>http://LenGithub.github.io/tags/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
       <title></title>
       <url>http://LenGithub.github.io/about/index.html</url>
       <content type="html"><![CDATA[<h1 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h1><p>@(java)[微信智能硬件|app接口|智能家居]</p>
@@ -71,7 +65,7 @@ padding: 0;
 <li>姓名: [王锥强][3]</li>
 <li><p>英文名: [Len][3]</p>
 </li>
-<li><p>Email: <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#58;&#x38;&#55;&#x32;&#49;&#52;&#x33;&#56;&#52;&#56;&#64;&#113;&#x71;&#46;&#x63;&#x6f;&#x6d;">&#x38;&#55;&#x32;&#49;&#52;&#x33;&#56;&#52;&#56;&#64;&#113;&#x71;&#46;&#x63;&#x6f;&#x6d;</a></p>
+<li><p>Email: <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x38;&#x37;&#x32;&#x31;&#52;&#x33;&#56;&#x34;&#56;&#x40;&#x71;&#113;&#x2e;&#99;&#111;&#x6d;">&#x38;&#x37;&#x32;&#x31;&#52;&#x33;&#56;&#x34;&#56;&#x40;&#x71;&#113;&#x2e;&#99;&#111;&#x6d;</a></p>
 </li>
 </ul>
 <p>##项目经验</p>
@@ -88,6 +82,12 @@ padding: 0;
 <p><strong>Note:</strong>  网上购物商城(b2c)<br> <strong>Date:</strong> 2013/10-2014/1<br>项目描述：是一套商品交易系统，整个系统包含二个子系统，分别是面向前端客户的商品交易系统，实现客户购买商品的需求；实现商品后台管理，实现业务订单处理及对站内各种信息进行管理的需求本人负责内容：本人负责注册、登录、用户注销、等模块的代码实现与测试。<br>责任描述：<br>本人负责模块的技术要点：<br>注册功能 密码利用md5密文加密，判断登录名是否已经存在，如果存在提示用户该用户名已存在。填充用户对象里面缺失的信息，比如激活码、电子邮件等.发送电子邮件到用户提供的电子邮件提示。登陆功能 使用ajax异步登录</p>
 </blockquote>
 ]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[tags]]></title>
+      <url>http://LenGithub.github.io/tags/index.html</url>
+      <content type="html"></content>
     </entry>
     
   

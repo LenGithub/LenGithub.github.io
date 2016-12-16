@@ -2241,3 +2241,4 @@ window.TagCanvas = TagCanvas;
 // set a flag for when the window has loaded
 AddHandler('load',function(){TagCanvas.loaded=1},window);
 })();
+
