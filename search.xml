@@ -17,21 +17,6 @@
 ]]></content>
     </entry>
     
-    <entry>
-      <title><![CDATA[我的第二篇博客]]></title>
-      <url>http://www.lenwang.cn/2016/12/15/hello-world%20-%20%E5%89%AF%E6%9C%AC/</url>
-      <content type="html"><![CDATA[<p>欢迎来到Len的技术空间</p>
-<h2 id="导读"><a href="#导读" class="headerlink" title="导读"></a>导读</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    </entry>
-    
   
   
     
@@ -79,7 +64,7 @@ padding: 0;
 <li>姓名: [王锥强][3]</li>
 <li><p>英文名: [Len][3]</p>
 </li>
-<li><p>Email: <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#111;&#x3a;&#x38;&#x37;&#x32;&#x31;&#52;&#x33;&#x38;&#52;&#x38;&#64;&#x71;&#113;&#46;&#x63;&#x6f;&#109;">&#x38;&#x37;&#x32;&#x31;&#52;&#x33;&#x38;&#52;&#x38;&#64;&#x71;&#113;&#46;&#x63;&#x6f;&#109;</a></p>
+<li><p>Email: <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#x38;&#55;&#x32;&#49;&#x34;&#x33;&#x38;&#x34;&#x38;&#x40;&#113;&#x71;&#x2e;&#x63;&#x6f;&#109;">&#x38;&#55;&#x32;&#49;&#x34;&#x33;&#x38;&#x34;&#x38;&#x40;&#113;&#x71;&#x2e;&#x63;&#x6f;&#109;</a></p>
 </li>
 </ul>
 <p>##项目经验</p>
